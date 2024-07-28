@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <title>Artsakh Culture</title>
+  <link rel="stylesheet" href="stle.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img class="img-logo" src="img/logo.png" alt="Artsakh Culture Logo">
+      </div>
+      <ul>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="carouselExample" class="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <img class="img-photo" src="img/Artsakh4.png" alt="Artsakh Culture">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <img class="img-photo" src="img/Artsakh2.png" alt="Artsakh Culture">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container">
+            <img class="img-photo" src="img/Artsakh3.png" alt="Artsakh Culture">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-control carousel-control-prev" onclick="carouselSlide(-1)">
+        &#10094;
+      </div>
+      <div class="carousel-control carousel-control-next" onclick="carouselSlide(1)">
+        &#10095;
+      </div>
+    </div>
+
+    <section id="about-us">
+      <div class="container">
+        <h3>What is Artsakh Culture?</h3>
+        <p>Artsakh Culture is a non-profit, non-political digital platform aimed at preserving and promoting the rich cultural heritage, unique dialect, and traditions of Artsakh. The platform is created considering the current situation and the threat of losing Artsakh's culture and dialect.</p>
+        <img class="img-photo" src="img/Artsakh4.png" alt="Artsakh Culture">
+      </div>
+    </section>
+    
+    <section id="team">
+      <div class="container">
+        <h3>Meet the Team</h3>
+        <p>Our dedicated team works tirelessly to bring you the best of Artsakh's cultural heritage.</p>
+        <img class="img-photo" src="img/Թիմ.png" alt="Artsakh Culture Team">
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Artsakh Culture. All rights reserved.</p>
+      <p>Contact us at: artsakh.culture@gmail.com</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram icone"></a>
+        <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook icone"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var slideIndex = 1;
+    showSlide(slideIndex);
+
+    function carouselSlide(n) {
+      showSlide(slideIndex += n);
+    }
+
+    function showSlide(n) {
+      var slides = document.getElementsByClassName("carousel-item");
+      
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+</html>
